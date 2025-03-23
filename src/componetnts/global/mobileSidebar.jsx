@@ -39,6 +39,11 @@ function MobileSidebar({ setOpenMenu, openMenu }) {
                             درباره ما
                         </Link>
                     </li>
+                    <li className=" cursor-pointer w-full py-4 px-2 border-b border-gray-400">
+                        <Link href={"/callus"} onClick={() => setOpenMenu(false)}>
+                            تماس با ما
+                        </Link>
+                    </li>
                 </ul>
                 <div className=" w-full h-auto flex justify-center">
                     <img className=" w-48" src="../../images/vandad.webp" alt="" />
