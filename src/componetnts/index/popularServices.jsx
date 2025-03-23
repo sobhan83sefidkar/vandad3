@@ -48,7 +48,7 @@ function PopularServices() {
                     <div data-aos="fade-up" className=" max-w-[22%] max-h-[350px] flex items-center lgmax:hidden">
                         <img className=" w-full h-[90%] rounded-lg" src="../../images/popular-services/test.webp" alt="" />
                     </div>
-                    <div className=" max-w-[75%] lgmax:max-w-full flex translate-x-[15px] justify-center">
+                    <div className=" max-w-[75%] lgmax:max-w-full flex justify-center">
                         <div className=" w-[100%] h-full">
                             <Slider {...settings}>
                                 {
