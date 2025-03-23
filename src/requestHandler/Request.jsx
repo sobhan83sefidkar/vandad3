@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000/api"
+const baseURL = "https://vandad-be.vercel.app/api"
 
 const Request = async (endPoint, method, body) => {
     try {
