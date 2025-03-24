@@ -33,17 +33,17 @@ function Navbar({ setOpenMenu }) {
         setLoading(false)
     }
 
-    const handleCheckAuth = async () => {
-        const data = await Request("check-auth", "GET")
-        if (data.notification.success) {
-            setLogin(true)
-            setUsername(data.notification.username)
-        }
-    }
+    // const handleCheckAuth = async () => {
+    //     const data = await Request("check-auth", "GET")
+    //     if (data.notification.success) {
+    //         setLogin(true)
+    //         setUsername(data.notification.username)
+    //     }
+    // }
 
-    useEffect(() => {
-        handleCheckAuth()
-    }, [router])
+    // useEffect(() => {
+    //     handleCheckAuth()
+    // }, [router])
     return (
         <>
             {loading &&
@@ -99,7 +99,7 @@ function Navbar({ setOpenMenu }) {
                         <img src="../../images/half-circle.webp" alt="" />
                     </div>
                     {
-                        login &&
+                        !login &&
                         <div className=" flex gap-2">
                             <div className=" flex items-center justify-center text-white">
                                 <button onClick={() => handleLogout()} className=" px-3 bg-red-500 py-2 rounded-md">خروج</button>
@@ -112,7 +112,7 @@ function Navbar({ setOpenMenu }) {
                             </div>
                         </div>
                     }
-                    {
+                    {/* {
                         !login &&
                         <div className=" text-red-500 font-bold text-2xl h-full flex items-center italic overflow-hidden">
                             <Link href={"/login"} className=" counseling">
@@ -120,7 +120,7 @@ function Navbar({ setOpenMenu }) {
                                 <span></span>
                             </Link>
                         </div>
-                    }
+                    } */}
                 </div>
             </div>
         </>
