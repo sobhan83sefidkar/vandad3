@@ -25,7 +25,7 @@ function Navbar({ setOpenMenu }) {
 
     const handleLogout = async () => {
         setLoading(true)
-        const data = await Request("logout", "GET")
+        const data = await Request("logout", "POST")
         if (data.notification.success) {
             setLogin(false)
             router.push("/")
