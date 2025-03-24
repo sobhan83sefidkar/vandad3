@@ -33,17 +33,17 @@ function Navbar({ setOpenMenu }) {
         setLoading(false)
     }
 
-    const handleCheckAuth = async () => {
-        const data = await Request("check-auth", "GET")
-        if (data.notification.success) {
-            setLogin(true)
-            setUsername(data.notification.username)
-        }
-    }
+    // const handleCheckAuth = async () => {
+    //     const data = await Request("check-auth", "GET")
+    //     if (data.notification.success) {
+    //         setLogin(true)
+    //         setUsername(data.notification.username)
+    //     }
+    // }
 
-    useEffect(() => {
-        handleCheckAuth()
-    }, [router])
+    // useEffect(() => {
+    //     handleCheckAuth()
+    // }, [router])
     return (
         <>
             {loading &&
