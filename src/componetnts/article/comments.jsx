@@ -31,8 +31,7 @@ function Comments() {
 
     const handleGetComment = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/get-show-comment/${router.query.article}`)
-            const data = await res.json()
+            const data = await Request(`get-show-comment/${router.query.article}`, "GET")
             setComment(data)
         } catch (err) {
             console.log(err)
